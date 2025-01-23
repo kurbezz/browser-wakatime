@@ -25,3 +25,8 @@ jobs:
           node-version: '18'
       - run: npm ci
       - run: npm test
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist
